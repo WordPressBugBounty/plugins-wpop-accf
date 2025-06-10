@@ -1,11 +1,11 @@
 === Active Campaign & Contact Form 7 ===
 
 Contributors: wpoperations
-Tags: active campaign, contact form 7 to active campaign, cf7 active campaign, subscription list, wpoperation, cf7 integration, mailing list, cf7 mailing list,ActiveCampaign,Contact Form 7,contact form to activecampaign
+Tags: active campaign, cf7 active campaign, subscription list, ActiveCampaign,Contact Form 7
 Requires at least: 5.6
-Tested up to: 6.6.2
+Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with
 
 
 == Changelog ==
+
+= 1.2.3 =
+* Compatibility check with WordPress 6.8.1
 
 = 1.2.2 =
 * Minor bugs fixed
