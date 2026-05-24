@@ -5,8 +5,8 @@
  * Author: WPoperation
  * Plugin URI: https://wordpress.org/plugins/wpop-accf
  * Author URI: https://wpoperation.com
- * Version: 1.2.3
- * Tested up to: 6.8.1
+ * Version: 1.2.4
+ * Tested up to: 7.0.0
  * Text Domain: wpop-accf
  * Domain Path: /languages/
  **/

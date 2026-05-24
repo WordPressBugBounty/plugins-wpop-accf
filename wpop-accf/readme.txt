@@ -3,9 +3,9 @@
 Contributors: wpoperations
 Tags: active campaign, cf7 active campaign, subscription list, ActiveCampaign,Contact Form 7
 Requires at least: 5.6
-Tested up to: 6.8.1
+Tested up to: 7.0.0
 Requires PHP: 7.4
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Compatibility check with WordPress
 
 = 1.2.3 =
 * Compatibility check with WordPress 6.8.1
