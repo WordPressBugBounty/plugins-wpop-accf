@@ -238,7 +238,7 @@ if(!class_exists('ACCF7_Active_Campaign_Settings')){
 						<li><?php esc_html_e('Option to add Tags','wpop-accf'); ?></li>
 						<li><?php esc_html_e('Supports Contact Form 7 Special Mail Tags','wpop-accf'); ?></li>
 						<li><?php esc_html_e('GDPR acceptance field','wpop-accf'); ?></li>
-						<li><?php esc_html_e('Life Time Free Updates & Support.'); ?></li>
+						<li><?php esc_html_e('Life Time Free Updates & Support.','wpop-accf'); ?></li>
 						
 						
 

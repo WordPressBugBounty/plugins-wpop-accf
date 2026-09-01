@@ -70,6 +70,7 @@ div#accf7-settings {
     display: inline-block;
     vertical-align: middle;
     min-width: 150px;
+    width: 30%;
 }
 
 #accf7-settings input[type=number] {
@@ -153,4 +154,81 @@ div#accf7-settings {
 
 .pro{
     color: red;
+}
+
+.accf7-main-settings.tab-pane.form-pro .pro-features ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ededed;
+}
+.accf7-main-settings.tab-pane.form-pro .pro-features a.button-secondary{
+    margin: 10px 0;
+}
+
+/* Upgrade to Pro admin notice */
+.accf7-upgrade-notice {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    margin: 15px 0 5px;
+    background: linear-gradient(135deg, #0f7a3d 0%, #05c305 100%);
+    border: none;
+    border-left: 4px solid #054d16;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(5, 195, 5, 0.25);
+    color: #ffffff;
+}
+.accf7-upgrade-notice__icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+}
+.accf7-upgrade-notice__icon .dashicons {
+    color: #fff200;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+.accf7-upgrade-notice__body {
+    flex: 1 1 auto;
+}
+.accf7-upgrade-notice__body p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.accf7-upgrade-notice__cta {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffffff;
+    color: #0f7a3d;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 30px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.accf7-upgrade-notice__cta:hover,
+.accf7-upgrade-notice__cta:focus {
+    color: #0f7a3d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 782px) {
+    .accf7-upgrade-notice {
+        flex-wrap: wrap;
+    }
+    .accf7-upgrade-notice__cta {
+        margin-left: 58px;
+    }
 }

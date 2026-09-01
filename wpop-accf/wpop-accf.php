@@ -5,8 +5,8 @@
  * Author: WPoperation
  * Plugin URI: https://wordpress.org/plugins/wpop-accf
  * Author URI: https://wpoperation.com
- * Version: 1.2.4
- * Tested up to: 7.0.0
+ * Version: 1.2.5
+ * Tested up to: 7.1
  * Text Domain: wpop-accf
  * Domain Path: /languages/
  **/
@@ -25,6 +25,7 @@ if (!class_exists('ACCF7_Integration')) {
             add_action( 'admin_enqueue_scripts',array($this,'accf7_register_backend_assets') );
             add_action('init', array(&$this,'init'));
             add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this,'accf7_pro_plugin_action_links') );
+            add_action( 'admin_notices', array($this,'accf7_upgrade_notice') );
         }
         public function init(){
             load_plugin_textdomain('wpop-accf', false, dirname(plugin_basename(__FILE__)) . '/languages/');
@@ -56,6 +57,28 @@ if (!class_exists('ACCF7_Integration')) {
             $class = 'notice notice-error';
             $message = __('Active Campaign & Contact Form 7  requires Contact form 7 to be installed and active.', 'wpop-accf');
             printf('<div class="%1$s"><p>%2$s</p></div>', $class, $message);
+        }
+
+        public function accf7_upgrade_notice() {
+            if ( ! current_user_can( 'manage_options' ) ) {
+                return;
+            }
+            $message   = __( 'Upgrade to premium version of ActiveCampaign & Contact Form 7 to unlock powerful features. Get up to 30% off for limited time.', 'wpop-accf' );
+            $cta_url   = 'https://wpoperation.com/plugins/active-campaign-contact-form-7-pro/';
+            $cta_label = __( 'Upgrade Now', 'wpop-accf' );
+            ?>
+            <div class="notice accf7-upgrade-notice is-dismissible">
+                <div class="accf7-upgrade-notice__icon" aria-hidden="true">
+                    <span class="dashicons dashicons-star-filled"></span>
+                </div>
+                <div class="accf7-upgrade-notice__body">
+                    <p><?php echo esc_html( $message ); ?></p>
+                </div>
+                <a href="<?php echo esc_url( $cta_url ); ?>" target="_blank" rel="noopener noreferrer" class="accf7-upgrade-notice__cta">
+                    <?php echo esc_html( $cta_label ); ?> &rarr;
+                </a>
+            </div>
+            <?php
         }
 
         function accf7_pro_plugin_action_links( $links ) {
